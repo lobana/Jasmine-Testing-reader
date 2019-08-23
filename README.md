@@ -1,3 +1,15 @@
+#Udacity - Feedreader Testing - Lobana 
+
+This web application is using Jasmine Library to test the functionality of the Website.
+
+## How to use this application?
+    -Download the zip or clone the repository.
+    -Open the folder
+    -Click on the index,html file to open the browser
+
+
+------------------------------------------------------------------------
+
 # Project Overview
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
