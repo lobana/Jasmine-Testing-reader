@@ -114,9 +114,36 @@ describe('Initial Entries', function() {
         
     });
     /* TODO: Write a new test suite named "New Feed Selection" */
-
+describe('New Feed Selection', function() {
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        var feedCount = allFeeds.length;
+        var before, after;
+        
+        beforeEach(function(done) {
+            expect(feedCount >= 2).toBe(true);
+            
+            loadFeed(0, function() {
+                before = $('.header-text').text() + $('.feed').find('.entry').text().replace(/ +/g, ' ');
+                
+                loadFeed(1, function() {
+                    after = $('.header-text').text() + $('.feed').find('.entry').text().replace(/ +/g, ' ');
+                    done();
+                
+                });
+                
+            });
+            
+            
+            
+        });
+        
+        it('Should Change Contents when Loaded', function(done) {
+            expect(before != after).toBe(true);
+            done();
+        });
+        
+    });
 }());
